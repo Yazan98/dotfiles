@@ -9,13 +9,15 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.bash_profile;
 
 # ZSH Theme
 ZSH_THEME="powerlevel10/powerlevel10k"
 plugins=(git zsh-autosuggestions)
+
+# Apply Theme
+source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -25,6 +27,9 @@ alias zshconfig="mate ~/.zshrc"
 alias ohmyzsh="mate ~/.oh-my-zsh"
 alias bundle!="bundle install && rake install"
 alias prod="git add . && git commit -m "New Changes" && git checkout master"
+alias prod-master="git checkout master"
+alias prod-main="git checkout main"
+
 alias adb='/Users/yazantarifi/Library/Android/sdk/platform-tools/adb'
 alias code="cd ~ && cd Code"
 
